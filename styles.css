@@ -1,0 +1,220 @@
+html, body, #intro
+{
+  height: 100%;
+}
+
+body, #intro
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #202020;
+}
+
+#intro
+{
+  justify-content: flex-start;
+}
+
+#reset
+{
+  position: fixed;
+  top: 3%;
+  right: 3%;
+  border-radius: 15%;
+}
+
+#message
+{
+  position: fixed;
+  top: 30%;
+  z-index: 99;
+  margin: 0px;
+}
+
+#question, #message
+{
+  text-align: center;
+  font-size: 8rem;
+  color: black;
+  text-shadow: 1px 1px 0 white,
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white;
+  font-family: monospace;
+}
+
+#question
+{
+  margin:5%;
+}
+
+#options, #level
+{
+  width: 70%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+
+.diffy
+{
+  font-size: 5rem;
+  line-height: 1rem;
+  height: 10rem;
+  width: fit-content;
+  border-radius: 60%;
+  border-width: 0px;
+}
+
+#nought,#easy
+{
+  color: white;
+  background-color: #202020;
+}
+
+#nought:hover, #easy:hover
+{
+  color: #202020;
+  background-color: white;
+}
+
+#cross, #hard
+{
+  background-color: #202020;
+  color: red;
+}
+
+#cross:hover, #hard:hover
+{
+  color: #202020;
+  background-color: red;
+}
+
+.mybtn
+{
+  font-size: 9rem;
+  line-height: 1rem;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 60%;
+  border-width: 0px;
+}
+
+#board
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row
+{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell
+{
+  width: 33%;
+  border-style: solid;
+  border-width: 0.03rem;
+  border-color: yellow;
+  text-align: center;
+  font-size: 9rem;
+  line-height: 10rem;
+}
+
+#c30
+{
+  border-top-width: 0rem;
+  border-left-width: 0rem;
+}
+
+#c35
+{
+  border-top-width: 0rem;
+}
+
+#c20
+{
+  border-top-width: 0rem;
+  border-right-width: 0rem;
+}
+
+#c5
+{
+  border-left-width: 0rem;
+}
+
+#c25
+{
+  border-right-width: 0rem;
+}
+
+#c0
+{
+  border-bottom-width: 0rem;
+  border-left-width: 0rem;
+}
+
+#c15
+{
+  border-bottom-width: 0rem;
+}
+
+#c10
+{
+  border-bottom-width: 0rem;
+  border-right-width: 0rem;
+}
+
+@media (max-width: 1000px) and
+(orientation: landscape) {
+  #question
+  {
+    font-size: 5rem;
+  }
+  #message
+  {
+    top: 15%
+  }
+  .cell
+  {
+    font-size: 7rem;
+    line-height: 8rem;
+  }
+}
+
+@media (max-width: 1000px) and
+(orientation: portrait) {
+  #question
+  {
+    margin-top: 40%;
+  }
+
+  #message
+  {
+    top: 40%
+  }
+
+  #reset
+  {
+    font-size: 3rem;
+  }
+
+  .cell
+  {
+    font-size: 12rem;
+    line-height: 16rem;
+  }
+}
